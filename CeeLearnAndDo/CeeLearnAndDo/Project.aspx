@@ -8,7 +8,7 @@
             <div class="col-lg-12">
                 <h1>Some of our projects</h1>
                 <p class="lead">
-                    To view all our projects, go to  <a target="_blank" href="/Project.aspx">Projects</a>.
+                    TEST To view all our projects, go to  <a target="_blank" href="/Project.aspx">Projects</a>.
                 </p>
             </div>
             <div class="col-lg-4 col-sm-4">
