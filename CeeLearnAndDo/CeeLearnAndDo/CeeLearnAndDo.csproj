@@ -94,10 +94,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CeeLearnAndDo.mdf" />
-    <Content Include="App_Data\CeeLearnAndDo_log.ldf">
-      <DependentUpon>CeeLearnAndDo.mdf</DependentUpon>
-    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
@@ -105,6 +101,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Models\ClassDiagram.cd" />
+    <Content Include="Project.aspx" />
     <Content Include="web.config" />
     <Content Include="Site.Master" />
     <None Include="web.Debug.config">
@@ -123,7 +120,6 @@
   <ItemGroup>
     <Content Include="Admin.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Project.aspx" />
     <Content Include="Web1.config" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +171,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="css\" />
     <Folder Include="fonts\" />
     <Folder Include="images\" />
