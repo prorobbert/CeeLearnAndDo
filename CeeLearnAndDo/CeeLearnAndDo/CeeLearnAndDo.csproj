@@ -94,6 +94,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CeeLearnAndDo.mdf" />
+    <Content Include="App_Data\CeeLearnAndDo_log.ldf">
+      <DependentUpon>CeeLearnAndDo.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
@@ -118,10 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
-    <Content Include="App_Data\CeeLearnAndDoDB.mdf" />
-    <Content Include="App_Data\CeeLearnAndDoDB_log.ldf">
-      <DependentUpon>CeeLearnAndDoDB.mdf</DependentUpon>
-    </Content>
     <Content Include="Global.asax" />
     <Content Include="Project.aspx" />
     <Content Include="Web1.config" />
