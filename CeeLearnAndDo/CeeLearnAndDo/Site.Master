@@ -40,14 +40,7 @@
                 <div id="myNav" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/Default.aspx">Home</a></li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
-                        <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/Project.aspx">All projects</a></li>
-                                <li><a href="/Project.aspx">recent projects</a></li>
-                                <li><a href="/Project.aspx">Biggest projects</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="/Project.aspx">Projects</a></li>
                         <li><a href="/Contact.aspx">Contact</a></li>
                         <li><a href="/Admin.aspx">Admin</a></li>
                     </ul>

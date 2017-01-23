@@ -2,8 +2,23 @@
 
 
 /*************************
-*******Typography******
+*******Eigen inbreng******
 **************************/
+
+.overOns
+{
+    text-align: center;
+    display: flex;
+}
+.overOns-left,
+.overOns-right
+{
+    flex: 1;
+}
+.OverOns-content
+{
+    flex: 8;
+}
 
 body
 {

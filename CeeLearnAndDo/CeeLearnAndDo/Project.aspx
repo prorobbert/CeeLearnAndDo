@@ -8,9 +8,11 @@
             <div class="col-lg-12">
                 <h1>Some of our projects</h1>
                 <p class="lead">
-                    TEST To view all our projects, go to  <a target="_blank" href="/Project.aspx">Projects</a>.
+                    To view all our projects, go to  <a target="_blank" href="/Project.aspx">Projects</a>.
                 </p>
             </div>
+            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1"></asp:ListView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
             <div class="col-lg-4 col-sm-4">
                 <div class="preview">
                     <div class="image">

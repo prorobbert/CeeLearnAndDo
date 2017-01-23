@@ -20,20 +20,20 @@
             <input name="cs_anchor1" id='cs_pause1_3' type="radio" class='cs_anchor pause'>
             <ul>
                 <li class="cs_skeleton">
-                    <img src="slider/csss_images1/1.jpg"
+                    <img src="slider/csss_images1/5.jpg"
                         style="width: 100%;"></li>
                 <li class='num0 img slide'>
-                    <img src='slider/csss_images1/1.jpg'
+                    <img src='slider/csss_images1/5.jpg'
                         alt='abstract-desktop-wallpaper-widescreen-top-model-computers-wallpapers-wallwuzz-hd-wallpaper-10823'
                         title='abstract-desktop-wallpaper-widescreen-top-model-computers-wallpapers-wallwuzz-hd-wallpaper-10823' /></li>
                 <li class='num1 img slide'>
-                    <img src='slider/csss_images1/2.jpg' alt='aura_rays_hd_1080p-HD'
+                    <img src='slider/csss_images1/6.jpg' alt='aura_rays_hd_1080p-HD'
                         title='aura_rays_hd_1080p-HD' /></li>
                 <li class='num2 img slide'>
-                    <img src='slider/csss_images1/3.jpg' alt='qxt1j-wallpapers-515728052-1920x1080'
+                    <img src='slider/csss_images1/7.jpg' alt='qxt1j-wallpapers-515728052-1920x1080'
                         title='qxt1j-wallpapers-515728052-1920x1080' /></li>
                 <li class='num3 img slide'>
-                    <img src='slider/csss_images1/4.jpg' alt='wpid-Abstract-Colorful-Wallpaper-Hd-0'
+                    <img src='slider/csss_images1/8.jpg' alt='wpid-Abstract-Colorful-Wallpaper-Hd-0'
                         title='wpid-Abstract-Colorful-Wallpaper-Hd-0' /></li>
             </ul>
             <%--  <div class="cs_engine">
@@ -124,8 +124,19 @@
         </div>--%>
         </div>
         <!-- End cssSlider.com -->
-       
-        <section id="section-bar">
+    
+    <div class="overOns">
+        <div class="overOns-left"></div>
+        <div class="overOns-content">
+            <h2>Over Ons</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur mollis eros, id tristique urna luctus ut. Curabitur vel nulla metus. Cras ac nunc purus. Sed sed augue ut ante ultricies ultrices. Curabitur id purus dolor. Fusce eu diam pretium, molestie tellus vel, rutrum dui. Praesent posuere tortor eget placerat porttitor. Cras auctor nisl vel arcu faucibus, eu auctor odio eleifend. Duis fringilla est ut est finibus auctor. Nam at imperdiet augue. Nulla quam libero, facilisis non nunc et, vestibulum varius quam. Fusce non feugiat magna. Vestibulum sollicitudin lacus sit amet nisl maximus, non varius metus hendrerit. Cras sollicitudin sit amet turpis non congue. Maecenas molestie augue vel leo varius ornare. Fusce imperdiet elementum sapien, vel viverra lorem. 
+            </p>
+        </div>
+        <div class="overOns-right"></div>
+    </div>    
+    
+    <section id="section-bar">
      <div class="container">
 
         <div class="row">
