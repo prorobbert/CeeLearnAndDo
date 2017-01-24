@@ -8,17 +8,10 @@
 .overOns
 {
     text-align: center;
-    display: flex;
+    width: 90%;
+    position: center;
 }
-.overOns-left,
-.overOns-right
-{
-    flex: 1;
-}
-.OverOns-content
-{
-    flex: 3;
-}
+
 
 body
 {

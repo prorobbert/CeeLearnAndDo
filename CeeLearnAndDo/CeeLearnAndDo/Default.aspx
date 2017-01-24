@@ -126,26 +126,17 @@
         <!-- End cssSlider.com -->
     
     <!-- Tickertape -->
-    <marquee OnMouseOver="this.stop()" OnMouseOut="this.start()" direction="left" scrollamount="3" height="auto" width="100%">
-        <asp:Repeater ID="Repeater1" runat="server">
+    <marquee>
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
             <ItemTemplate>
-                <asp:HyperLink ID="HyperLink1" runat="server"
-                    text='<%# Eval("Description") %>'>
-                </asp:HyperLink>
+                <asp:Label ID="Label2" runat="server" Text="&nbsp&nbsp&nbsp||&nbsp&nbsp&nbsp&nbsp"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="&nbsp&nbsp&nbsp&nbsp"></asp:Label>
             </ItemTemplate>
-        </asp:Repeater></marquee>
-
-    <!-- Over ons -->
-    <div class="overOns">
-        <div class="overOns-left"></div>
-        <div class="overOns-content">
-            <h2>Over Ons</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur mollis eros, id tristique urna luctus ut. Curabitur vel nulla metus. Cras ac nunc purus. Sed sed augue ut ante ultricies ultrices. Curabitur id purus dolor. Fusce eu diam pretium, molestie tellus vel, rutrum dui. Praesent posuere tortor eget placerat porttitor. Cras auctor nisl vel arcu faucibus, eu auctor odio eleifend. Duis fringilla est ut est finibus auctor. Nam at imperdiet augue. Nulla quam libero, facilisis non nunc et, vestibulum varius quam. Fusce non feugiat magna. Vestibulum sollicitudin lacus sit amet nisl maximus, non varius metus hendrerit. Cras sollicitudin sit amet turpis non congue. Maecenas molestie augue vel leo varius ornare. Fusce imperdiet elementum sapien, vel viverra lorem. 
-            </p>
-        </div>
-        <div class="overOns-right"></div>
-    </div>    
+        </asp:Repeater>
+    </marquee>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Description] FROM [Tickertape]"></asp:SqlDataSource>
+ 
     
     <section id="section-bar">
      <div class="container">
