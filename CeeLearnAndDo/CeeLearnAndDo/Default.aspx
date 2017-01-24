@@ -125,6 +125,17 @@
         </div>
         <!-- End cssSlider.com -->
     
+    <!-- Tickertape -->
+    <marquee OnMouseOver="this.stop()" OnMouseOut="this.start()" direction="left" scrollamount="3" height="auto" width="100%">
+        <asp:Repeater ID="Repeater1" runat="server">
+            <ItemTemplate>
+                <asp:HyperLink ID="HyperLink1" runat="server"
+                    text='<%# Eval("Description") %>'>
+                </asp:HyperLink>
+            </ItemTemplate>
+        </asp:Repeater></marquee>
+
+    <!-- Over ons -->
     <div class="overOns">
         <div class="overOns-left"></div>
         <div class="overOns-content">

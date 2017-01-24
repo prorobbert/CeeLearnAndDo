@@ -94,9 +94,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CeeLearnAndDo.mdf" />
-    <Content Include="App_Data\CeeLearnAndDo_log.ldf">
-      <DependentUpon>CeeLearnAndDo.mdf</DependentUpon>
+    <Content Include="App_Data\CeeLearnAndDoDB.mdf" />
+    <Content Include="App_Data\CeeLearnAndDoDB_log.ldf">
+      <DependentUpon>CeeLearnAndDoDB.mdf</DependentUpon>
     </Content>
     <Content Include="Contact.aspx" />
     <Content Include="css\animate.min.css" />
@@ -164,7 +164,7 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\CLAD_DB.cs" />
+    <Compile Include="CeeLearnAndDoDB.cs" />
     <Compile Include="Classes\FaQProp.cs" />
     <Compile Include="Classes\MailInfoProp.cs" />
     <Compile Include="Classes\ProjectProp.cs" />

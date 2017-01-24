@@ -7,7 +7,7 @@ namespace CeeLearnAndDo.Classes
 {
     public class TickertapeProp
     {
-        public int TickerTape_Id { get; set; }
-        public string TickerTape_Description { get; set; }
+        public int Tickertape_Id { get; set; }
+        public string Tickertape_Description { get; set; }
     }
 }
