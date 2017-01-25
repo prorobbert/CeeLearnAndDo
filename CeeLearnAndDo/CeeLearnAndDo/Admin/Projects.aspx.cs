@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -18,6 +19,7 @@ namespace CeeLearnAndDo.Admin
             if (!IsPostBack)
             {
                 BindData();
+
             }
         }
 
@@ -58,7 +60,7 @@ namespace CeeLearnAndDo.Admin
         {
             using (SqlConnection con = new SqlConnection(ConStr))
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Tickertape SET Description = @Description WHERE Id = @Id", con);
+                SqlCommand cmd = new SqlCommand("UPDATE Project SET Description = @Description WHERE Id = @Id", con);
                 cmd.Parameters.AddWithValue("@Description", Convert.ToString(e.NewValues["Tickertape_Description"]));
                 cmd.Parameters.AddWithValue("@Id", e.Keys[0]);
                 con.Open();
@@ -75,7 +77,7 @@ namespace CeeLearnAndDo.Admin
         {
             using (SqlConnection con = new SqlConnection(ConStr))
             {
-                SqlCommand command = new SqlCommand("INSERT INTO Tickertape (Description) VALUES (@Description)", con);
+                SqlCommand command = new SqlCommand("INSERT INTO Project (Description) VALUES (@Description)", con);
                 command.Parameters.AddWithValue("@Description", Description.Value);
 
                 con.Open();
@@ -87,7 +89,7 @@ namespace CeeLearnAndDo.Admin
 
         public void BindData()
         {
-            GridViewProducts.DataSource = dbObj.GetTickertape();
+            GridViewProducts.DataSource = dbObj.GetProject();
             GridViewProducts.DataBind();
         }
 

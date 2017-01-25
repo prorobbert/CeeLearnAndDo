@@ -44,6 +44,7 @@ namespace CeeLearnAndDo
                 while (reader.Read())
                 {
                     ProjectProp p = new ProjectProp();
+                    p.Project_Id = Convert.ToInt32(reader["Id"]);
                     p.Project_Name = reader["Naam"].ToString();
                     p.Project_Description = reader["Description"].ToString();
                     p.Project_Publisher = reader["Publisher"].ToString();
