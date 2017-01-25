@@ -55,5 +55,29 @@ namespace CeeLearnAndDo
             }
             return projects;
         }
+
+
+        public List<AdminProjectProp> GetAdminProject()
+        {
+            List<AdminProjectProp> projects = new List<AdminProjectProp>();
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                con.Open();
+                SqlCommand selectTape = new SqlCommand("SELECT * FROM Project", con);
+                SqlDataReader reader = selectTape.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    AdminProjectProp p = new AdminProjectProp();
+                    p.Project_Id = Convert.ToInt32(reader["Id"]);
+                    p.Project_Name = reader["Name"].ToString();
+                    p.Project_Publisher = reader["Publisher"].ToString();
+                    p.Project_Image = reader["Image"].ToString();
+
+                    projects.Add(p);
+                }
+            }
+            return projects;
+        }
     }
 }
