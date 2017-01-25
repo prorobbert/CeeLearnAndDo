@@ -56,10 +56,7 @@ namespace CeeLearnAndDo.Admin
             {
                 Response.Write("<script>alert('error')</script>");
             }
-
-
-
-
+            
         }
 
 

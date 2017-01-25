@@ -141,6 +141,7 @@
     <Content Include="web.config" />
     <Content Include="Site.Master" />
     <Content Include="Admin\AdminPage.Master" />
+    <Content Include="Admin\SMTP.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="Admin\SMTP.aspx.designer.cs">
       <DependentUpon>SMTP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SMTP.Master.cs">
+      <DependentUpon>SMTP.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SMTP.Master.designer.cs">
+      <DependentUpon>SMTP.Master</DependentUpon>
     </Compile>
     <Compile Include="Admin\TickerTape.aspx.cs">
       <DependentUpon>TickerTape.aspx</DependentUpon>

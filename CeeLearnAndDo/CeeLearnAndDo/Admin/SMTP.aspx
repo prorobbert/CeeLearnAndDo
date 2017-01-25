@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="SMTP.aspx.cs" Inherits="CeeLearnAndDo.Admin.SMTP" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/SMTP.Master" AutoEventWireup="true" CodeBehind="SMTP.aspx.cs" Inherits="CeeLearnAndDo.Admin.SMTP" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PlaceHolderHead" runat="server">
 </asp:Content>
@@ -21,7 +21,7 @@
             <li class="active">
                 <a href="/Admin/SMTPsettings.aspx">
                     <i class="material-icons">settings</i>
-                    <p>Settings</p>
+                    <p>Mail Settings</p>
                 </a>
             </li>
              <li>
@@ -110,3 +110,4 @@
             </div>
         </div>
     </div>
+    </asp:Content>
