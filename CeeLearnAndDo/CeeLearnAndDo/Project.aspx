@@ -11,8 +11,19 @@
                     To view all our projects, go to  <a target="_blank" href="/Project.aspx">Projects</a>.
                 </p>
             </div>
-            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1"></asp:ListView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+            <asp:ListView ID="ListView1" runat="server">             
+                <ItemTemplate>
+                    <td runat="server" style="background-color:#DCDCDC;color: #000000;">Naam:
+                        <asp:Label ID="NaamLabel" runat="server" Text='<%# Eval("Project_Name") %>' />
+                        <br />Image:
+                        <asp:Label ID="ImageLabel" runat="server" Text='<%# Eval("Project_Image") %>' />
+                        <br />Publisher:
+                        <asp:Label ID="PublisherLabel" runat="server" Text='<%# Eval("Project_Publisher") %>' />
+                        <br />Description:
+                        <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Eval("Project_Description") %>' />
+                        <br /></td>
+                </ItemTemplate>
+            </asp:ListView>
             <div class="col-lg-4 col-sm-4">
                 <div class="preview">
                     <div class="image">
