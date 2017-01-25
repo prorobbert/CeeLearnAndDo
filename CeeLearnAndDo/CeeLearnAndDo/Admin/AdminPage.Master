@@ -45,7 +45,7 @@
 			-->
 
                 <div class="logo">
-                    <a href="/Products.aspx" class="simple-text">SmoothBoards
+                    <a href="/Products.aspx" class="simple-text">CeeLearnAndDo
                     </a>
                 </div>
 
@@ -113,15 +113,15 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/ProductenPagina.aspx">Products
+                                    <a href="/Project.aspx">Projects
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/FAQ.aspx">Faq
+                                    <a href="/Contact.aspx">Contact
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/Admin/FaqAdmin.aspx">Admin
+                                    <a href="/Admin/TickerTape.aspx">Admin
                                     </a>
                                 </li>
                             </ul>
@@ -129,7 +129,7 @@
                         <p class="copyright pull-right">
                             &copy;
                             <script>document.write(new Date().getFullYear())</script>
-                            SmoothBoards
+                            CeeLearnAndDo
 	               
                         </p>
                     </div>
