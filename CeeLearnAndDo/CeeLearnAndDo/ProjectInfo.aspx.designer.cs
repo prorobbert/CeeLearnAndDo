@@ -13,30 +13,39 @@ namespace CeeLearnAndDo {
     public partial class ProjectInfo {
         
         /// <summary>
-        /// lbNaam control.
+        /// ProjectImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbNaam;
+        protected global::System.Web.UI.WebControls.Label ProjectImage;
         
         /// <summary>
-        /// lbDescription control.
+        /// ProjectTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbDescription;
+        protected global::System.Web.UI.WebControls.Label ProjectTitle;
         
         /// <summary>
-        /// lbPublisher control.
+        /// ProjectDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbPublisher;
+        protected global::System.Web.UI.WebControls.Label ProjectDescription;
+        
+        /// <summary>
+        /// ProjectPublisher control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ProjectPublisher;
     }
 }

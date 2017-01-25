@@ -3,22 +3,226 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-lg-4 col-sm-4">
-        <div class="preview">
-            <div class="image">
-                <img class="img-responsive" src="<%= project.Project_Image %>" />
+
+    <div class="page-wrap">
+        <div id="card1" class="card">
+            <div class="center">
+                <asp:Label ID="ProjectImage" runat="server" Text=""></asp:Label>
             </div>
-            <div class="options">
-                <h3>
-                    <asp:Label ID="lbNaam" runat="server" Font-Size="X-Large" ><%= project.Project_Name %></asp:Label>
-                </h3>
-                <p>
-                    <asp:Label ID="lbDescription" runat="server"><%= project.Project_Description%></asp:Label>
+            <div class="content">
+                <h1>
+                    <asp:Label ID="ProjectTitle" runat="server" Text=""></asp:Label></h1>
+                <p class="clickable">
+                    <asp:Label ID="ProjectDescription" runat="server" Text=""></asp:Label>
                 </p>
-                <div>
-                    <asp:Label ID="lbPublisher" runat="server" Font-Size="Smaller" ><%= project.Project_Publisher %></asp:Label>
-                </div>
+                Publisher: 
+                <asp:Label ID="ProjectPublisher" runat="server" Text=""></asp:Label>
             </div>
         </div>
     </div>
+
+
+
+    <style>
+        /* Font icon colors, etc., are tedious and reside in another stylesheet */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            max-width: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            transform-style: preserve-3d;
+            background-color: #000;
+        }
+
+        .page-wrap {
+            margin: 0;
+            padding: 0;
+            perspective: 1px;
+            height: 100%;
+            overflow-x: hidden;
+            font-family: 'avenir next', avenir, helvetica, 'helvetica neue', arial, sans-serif;
+            color: black;
+            background: none;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .clickable {
+            transform: translateZ(0);
+        }
+
+        a {
+            color: rgb(222, 68, 21);
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: rgb(0, 116, 217);
+            }
+
+        /* Off-screen text for accessibility */
+        .screen-reader-text {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        #headshot {
+            width: 220px;
+            padding: .5em;
+            margin-bottom: -3em;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .4);
+            box-shadow: .5em .5em .5em rgba(0, 0, 0, .4);
+        }
+
+        .content {
+            width: 80vw;
+            max-width: 45em;
+            padding: 1.5em 2em;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, .75);
+            box-shadow: .5em .5em .5em rgba(0, 0, 0, .4);
+        }
+
+        .card {
+            position: relative;
+            padding: 25vh 15px 25vh 2px;
+            min-height: 100%;
+            max-width: 100vw;
+            transform-style: inherit;
+        }
+
+            .card:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+
+            .card,
+            .card:before {
+                background: 50% 50% / cover;
+            }
+
+        #card1 {
+            background: linear-gradient(rgba(0, 116, 217, .75), rgba(222, 68, 21, .85)), url(https://images.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Ffc02.deviantart.net%2Ffs71%2Ff%2F2014%2F076%2Fb%2Fa%2Fabstract_wallpaper_1080p_by_supersaejang-d7ajj1p.png&u=http://orig04.deviantart.net/472b/f/2014/076/b/a/abstract_wallpaper_1080p_by_supersaejang-d7ajj1p.pngs) center/cover;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+
+        #card2 {
+            background-color: black;
+            background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+            margin: 20em 0 35em 0;
+        }
+
+        #card3 {
+            background-color: #269;
+            background-image: linear-gradient(white 2px, transparent 2px), linear-gradient(90deg, white 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+            background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+            background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+
+        #card4 {
+            background: url(//lh3.googleusercontent.com/DvtKuq7I2VfPS-bTXNM3KY5eEvsm5SbjvTszJR0lWs9u=w1377-h914-no) center/cover;
+            margin-top: 35em;
+        }
+
+        /* App image styles */
+        .app-block {
+            flex-flow: row wrap;
+        }
+
+        .app {
+            width: 300px;
+            height: 225px;
+            max-width: 50vw;
+            margin: .5em;
+            box-shadow: .3em .3em .3em rgba(0, 0, 0, .4);
+            border: .25em solid white;
+            display: inline-block;
+        }
+
+        /* Title captions for FCC apps */
+        span.title {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            cursor: pointer;
+            display: table;
+        }
+
+            span.title span {
+                width: 295px;
+                height: 218px;
+                max-width: calc(50vw - 8px);
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+        .app span.title:hover {
+            opacity: 1;
+        }
+
+        span.title {
+            background: rgba(0,0,0,0.5);
+            font-size: 1.6em;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            display: table;
+            opacity: 0;
+            -webkit-transition: opacity 500ms;
+            -moz-transition: opacity 500ms;
+            -o-transition: opacity 500ms;
+            transition: opacity 500ms;
+        }
+
+        /* Signature */
+        .signature {
+            text-align: center;
+            margin-top: 3.5em;
+        }
+
+            .signature p {
+                color: #666;
+                font-size: .8em;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-style: italic;
+                letter-spacing: .2em;
+                margin: 0;
+                padding: 0;
+            }
+
+            .signature img {
+                width: 320px;
+                max-width: 50vw;
+            }
+    </style>
 </asp:Content>

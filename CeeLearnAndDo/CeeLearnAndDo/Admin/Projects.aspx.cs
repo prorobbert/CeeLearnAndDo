@@ -84,8 +84,8 @@ namespace CeeLearnAndDo.Admin
         {
             using (SqlConnection con = new SqlConnection(ConStr))
             {
-                SqlCommand command = new SqlCommand("Update Project SET Naam = @Naam, Publisher = @Publisher, Image = @Image WHERE Id = @Id", con);
-                command.Parameters.AddWithValue("@Naam", Convert.ToString(e.NewValues["Project_Name"]));
+                SqlCommand command = new SqlCommand("Update Project SET Name = @Name, Publisher = @Publisher, Image = @Image WHERE Id = @Id", con);
+                command.Parameters.AddWithValue("@Name", Convert.ToString(e.NewValues["Project_Name"]));
                 command.Parameters.AddWithValue("@Publisher", Convert.ToString(e.NewValues["Project_Publisher"]));
                 command.Parameters.AddWithValue("@Image", Convert.ToString(e.NewValues["Project_Image"]));
                 command.Parameters.AddWithValue("@Id", e.Keys[0]);
