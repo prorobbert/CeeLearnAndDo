@@ -56,28 +56,22 @@ namespace CeeLearnAndDo
             return projects;
         }
 
-
-        public List<AdminProjectProp> GetAdminProject()
+        public ProjectProp GetOneProject(int id)
         {
-            List<AdminProjectProp> projects = new List<AdminProjectProp>();
+            ProjectProp p = new ProjectProp();
             using (SqlConnection con = new SqlConnection(connect))
             {
                 con.Open();
-                SqlCommand selectTape = new SqlCommand("SELECT * FROM Project", con);
-                SqlDataReader reader = selectTape.ExecuteReader();
+                SqlCommand selectProduct = new SqlCommand("SELECT * FROM Project WHERE Id = @id", con);
+                selectProduct.Parameters.AddWithValue("@id", id);
+                SqlDataReader reader = selectProduct.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    AdminProjectProp p = new AdminProjectProp();
-                    p.Project_Id = Convert.ToInt32(reader["Id"]);
-                    p.Project_Name = reader["Name"].ToString();
-                    p.Project_Publisher = reader["Publisher"].ToString();
-                    p.Project_Image = reader["Image"].ToString();
-
-                    projects.Add(p);
-                }
+                p.Project_Name = reader["Name"].ToString();
+                p.Project_Description = reader["Description"].ToString();
+                p.Project_Publisher = reader["Publisher"].ToString();
+                p.Project_Image = reader["Image"].ToString();
             }
-            return projects;
+            return p;
         }
     }
 }
