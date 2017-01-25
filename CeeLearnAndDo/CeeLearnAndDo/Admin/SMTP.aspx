@@ -4,30 +4,24 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SideBarPlaceholder" runat="server">
 
- <div class="sidebar-wrapper">
+<div class="sidebar-wrapper">
         <ul class="nav">
             <li>
-                <a href="/Admin/FaqAdmin.aspx">
+                <a href="/Admin/TickerTape.aspx">
                     <i class="material-icons">settings</i>
-                    <p>FAQ</p>
+                    <p>TickerTape</p>
                 </a>
             </li>
             <li>
-                <a href="/Admin/ProductsAdmin.aspx">
+                <a href="/Admin/Projects.aspx">
                     <i class="material-icons">settings</i>
-                    <p>Products</p>
+                    <p>Projects</p>
                 </a>
             </li>
             <li class="active">
-                <a href="/Admin/SMTPsettings.aspx">
+                <a href="/Admin/SMTP.aspx">
                     <i class="material-icons">settings</i>
                     <p>Mail Settings</p>
-                </a>
-            </li>
-             <li>
-                <a href="/Admin/NieuwsbriefAdmin.aspx">
-                    <i class="material-icons">settings</i>
-                    <p>Nieuwsbrief</p>
                 </a>
             </li>
         </ul>

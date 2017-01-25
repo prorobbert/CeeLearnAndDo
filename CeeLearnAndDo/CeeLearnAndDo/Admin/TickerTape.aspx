@@ -116,7 +116,7 @@
 <asp:Content ID="Content6" ContentPlaceHolderID="SideBarPlaceholder" runat="server">
 
 
-    <div class="sidebar-wrapper">
+   <div class="sidebar-wrapper">
         <ul class="nav">
             <li class="active">
                 <a href="/Admin/TickerTape.aspx">
@@ -125,21 +125,15 @@
                 </a>
             </li>
             <li>
-                <a href="/Admin/ProductsAdmin.aspx">
+                <a href="/Admin/Projects.aspx">
                     <i class="material-icons">settings</i>
-                    <p>Products</p>
+                    <p>Projects</p>
                 </a>
             </li>
             <li>
-                <a href="/Admin/SMTPsettings.aspx">
+                <a href="/Admin/SMTP.aspx">
                     <i class="material-icons">settings</i>
-                    <p>Settings</p>
-                </a>
-            </li>
-            <li>
-                <a href="/Admin/NieuwsbriefAdmin.aspx">
-                    <i class="material-icons">settings</i>
-                    <p>Nieuwsbrief</p>
+                    <p>Mail Settings</p>
                 </a>
             </li>
         </ul>
