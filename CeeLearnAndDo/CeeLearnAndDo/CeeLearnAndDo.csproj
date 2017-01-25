@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Projects.aspx" />
+    <Content Include="Admin\SMTP.aspx" />
     <Content Include="Admin\TickerTape.aspx" />
     <Content Include="App_Data\CeeLearnAndDoDB.mdf" />
     <Content Include="App_Data\CeeLearnAndDoDB_log.ldf">
@@ -164,6 +166,20 @@
     </Compile>
     <Compile Include="Admin\AdminPage.Master.designer.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SMTP.aspx.cs">
+      <DependentUpon>SMTP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SMTP.aspx.designer.cs">
+      <DependentUpon>SMTP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\TickerTape.aspx.cs">
       <DependentUpon>TickerTape.aspx</DependentUpon>
