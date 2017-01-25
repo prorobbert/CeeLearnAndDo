@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\TickerTape.aspx" />
     <Content Include="App_Data\CeeLearnAndDoDB.mdf" />
     <Content Include="App_Data\CeeLearnAndDoDB_log.ldf">
       <DependentUpon>CeeLearnAndDoDB.mdf</DependentUpon>
@@ -137,6 +138,7 @@
     </Content>
     <Content Include="web.config" />
     <Content Include="Site.Master" />
+    <Content Include="Admin\AdminPage.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -163,6 +165,19 @@
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPage.Master.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPage.Master.designer.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TickerTape.aspx.cs">
+      <DependentUpon>TickerTape.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TickerTape.aspx.designer.cs">
+      <DependentUpon>TickerTape.aspx</DependentUpon>
     </Compile>
     <Compile Include="CeeLearnAndDoDB.cs" />
     <Compile Include="Classes\FaQProp.cs" />
@@ -209,6 +224,7 @@
     <Folder Include="fonts\" />
     <Folder Include="images\" />
     <Folder Include="js\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
