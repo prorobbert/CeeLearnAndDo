@@ -10,7 +10,6 @@ namespace CeeLearnAndDo.Classes
         public int Project_Id { get; set; }
         public string Project_Name { get; set; }
         public string Project_Description { get; set; }
-        public string Project_Title { get; set; }
         public string Project_Publisher { get; set; }
         public string Project_Image { get; set; }
     }
