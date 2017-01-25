@@ -29,9 +29,9 @@ namespace CeeLearnAndDo.Admin
 
             using (SqlConnection connection = new SqlConnection(ConStr))
             {
-                using (SqlCommand command = new SqlCommand("DELETE FROM FAQ Where Id=@FAQIdPar", connection))
+                using (SqlCommand command = new SqlCommand("DELETE FROM Tickertape Where Id=@Id", connection))
                 {
-                    command.Parameters.AddWithValue("@FAQIdPar", GridViewProducts.DataKeys[e.RowIndex].Value);
+                    command.Parameters.AddWithValue("@Id", GridViewProducts.DataKeys[e.RowIndex].Value);
                     connection.Open();
                     command.ExecuteNonQuery();
 
@@ -59,9 +59,8 @@ namespace CeeLearnAndDo.Admin
         {
             using (SqlConnection con = new SqlConnection(ConStr))
             {
-                SqlCommand cmd = new SqlCommand("UPDATE FAQ SET Vraag = @VraagPar, Antwoord = @AntwoordPar WHERE Id = @Id", con);
-                cmd.Parameters.AddWithValue("@VraagPar", Convert.ToString(e.NewValues["Vraag"]));
-                cmd.Parameters.AddWithValue("@AntwoordPar", Convert.ToString(e.NewValues["Antwoord"]));
+                SqlCommand cmd = new SqlCommand("UPDATE Tickertape SET Description = @Description WHERE Id = @Id", con);
+                cmd.Parameters.AddWithValue("@Description", Convert.ToString(e.NewValues["Tickertape_Description"]));
                 cmd.Parameters.AddWithValue("@Id", e.Keys[0]);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -77,9 +76,8 @@ namespace CeeLearnAndDo.Admin
         {
             using (SqlConnection con = new SqlConnection(ConStr))
             {
-                SqlCommand command = new SqlCommand("INSERT INTO FAQ (Vraag, Antwoord) VALUES (@Vraag, @Antwoord)", con);
-                //command.Parameters.AddWithValue("@Vraag", Question.Value);
-                //command.Parameters.AddWithValue("@Antwoord", Answer.Value);
+                SqlCommand command = new SqlCommand("INSERT INTO Tickertape (Description) VALUES (@Description)", con);
+                command.Parameters.AddWithValue("@Description", Description.Value);
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -90,7 +88,7 @@ namespace CeeLearnAndDo.Admin
 
         public void BindData()
         {
-            //GridViewProducts.DataSource = dbObj.getItems1();
+            GridViewProducts.DataSource = dbObj.GetTickertape();
             GridViewProducts.DataBind();
         }
 

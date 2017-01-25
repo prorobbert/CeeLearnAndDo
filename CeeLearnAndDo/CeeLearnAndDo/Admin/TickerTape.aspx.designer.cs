@@ -49,40 +49,13 @@ namespace CeeLearnAndDo.Admin {
         protected global::System.Web.UI.WebControls.GridView GridViewProducts;
         
         /// <summary>
-        /// ModelId control.
+        /// Description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ModelId;
-        
-        /// <summary>
-        /// BeschijvingId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText BeschijvingId;
-        
-        /// <summary>
-        /// VerkoopprijsId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText VerkoopprijsId;
-        
-        /// <summary>
-        /// Afbeelding_URLId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Afbeelding_URLId;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Description;
         
         /// <summary>
         /// Button1 control.
