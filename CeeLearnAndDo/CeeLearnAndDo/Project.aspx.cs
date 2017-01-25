@@ -15,6 +15,5 @@ namespace CeeLearnAndDo
             ListView1.DataSource = db.GetProject();
             ListView1.DataBind();
         }
-
     }
 }

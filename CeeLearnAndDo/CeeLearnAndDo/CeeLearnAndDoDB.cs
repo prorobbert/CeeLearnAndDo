@@ -44,7 +44,8 @@ namespace CeeLearnAndDo
                 while (reader.Read())
                 {
                     ProjectProp p = new ProjectProp();
-                    p.Project_Name = reader["Naam"].ToString();
+                    p.Project_Id = Convert.ToInt32(reader["Id"]);
+                    p.Project_Name = reader["Name"].ToString();
                     p.Project_Description = reader["Description"].ToString();
                     p.Project_Publisher = reader["Publisher"].ToString();
                     p.Project_Image = reader["Image"].ToString();
@@ -53,6 +54,24 @@ namespace CeeLearnAndDo
                 }
             }
             return projects;
+        }
+
+        public ProjectProp GetOneProject(int id)
+        {
+            ProjectProp p = new ProjectProp();
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                con.Open();
+                SqlCommand selectProduct = new SqlCommand("SELECT * FROM Project WHERE Id = @id", con);
+                selectProduct.Parameters.AddWithValue("@id", id);
+                SqlDataReader reader = selectProduct.ExecuteReader();
+
+                p.Project_Name = reader["Name"].ToString();
+                p.Project_Description = reader["Description"].ToString();
+                p.Project_Publisher = reader["Publisher"].ToString();
+                p.Project_Image = reader["Image"].ToString();
+            }
+            return p;
         }
     }
 }
