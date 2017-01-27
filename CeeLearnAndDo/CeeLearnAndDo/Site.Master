@@ -42,7 +42,7 @@
                         <li><a href="/Default.aspx">Home</a></li>
                         <li><a href="/Project.aspx">Projects</a></li>
                         <li><a href="/Contact.aspx">Contact</a></li>
-                        <li><a href="/Admin.aspx">Admin</a></li>
+                        <li><a href="Admin/TickerTape.aspx">Admin</a></li>
                     </ul>
                 </div>
             </div>

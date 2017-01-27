@@ -109,6 +109,7 @@
     <Content Include="css\responsive.css" />
     <Content Include="css\slicebox.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -143,23 +144,19 @@
     <Content Include="Site.Master" />
     <Content Include="Admin\AdminPage.Master" />
     <Content Include="Admin\SMTP.Master" />
+    <Content Include="Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
-    <None Include="Web1.Debug.config">
-      <DependentUpon>Web1.config</DependentUpon>
-    </None>
-    <None Include="Web1.Release.config">
-      <DependentUpon>Web1.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Project.aspx" />
-    <Content Include="Web1.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\AdminPage.Master.cs">
@@ -221,6 +218,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Project.aspx.cs">
       <DependentUpon>Project.aspx</DependentUpon>
